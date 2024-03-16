@@ -1,0 +1,231 @@
+html {
+    width: 100%;
+}
+body {
+    background: linear-gradient(to bottom, #02ffc81f, #149dff50, #ff6cf346);
+    width: 100%;
+    min-width: 300px;
+    margin: auto;
+    box-sizing: border-box;
+}
+.layout {
+    display: grid;
+    grid-template-columns: 2vw 1fr 2vw;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "header header header"
+    ". main ."
+    "footer footer footer";
+}
+header {
+    grid-area: header;
+    width:100%;
+    height: 40px;
+    padding: 5px;
+    margin: 0 auto;
+    background: linear-gradient(to right, #02ff20, #abffb9);
+    position: sticky;
+    top:0;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.container {
+    max-width: 1560px;
+    margin: 5px 0;
+}
+.navigation {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.nav {
+    position: relative;
+    margin: 0 5px 0 5px;
+    padding: 5px;
+    top: 5px;
+    left:5px;
+    background-color: rgba(18, 137, 255, 0.782);
+    flex-shrink: 1;
+}
+.nav:hover,
+.nav:active {
+    color:black;
+}
+main {
+    grid-area: main;
+}
+.main__personalphotos {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto;
+    border:none;
+    border-radius: 16px;
+}
+.main__personalphotos-photo {
+    height: 25vw;
+}
+.main__personalphotos-photo img,
+.main__educationphotos-photo img,
+.main__workphotos-photo img,
+.main__hobbyphotos-photo img,
+.main__introductiontoit-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    object-position: center;
+}
+.main__personal-tag {
+    margin: 5px;
+}
+.main__personal-textabout {
+    padding: 5px;
+    background: linear-gradient(to right, #9ac5ff, #d1e8ff);
+    border-radius: 10px;
+    margin: 5px 0;
+}
+.main__education {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr;
+    gap:10px;
+    height: 15vw;
+}
+.main__educationphotos {
+    display: flex;
+    flex-direction: column;
+    gap:0;
+    height: 15vw;
+}
+.main__educationphotos-photo {
+    height:50%;
+}
+ul {
+    text-align: center;
+    background: linear-gradient(to right, #9ac5ff, #d1e8ff);
+    border-radius: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+ul li::before {
+    content: "\1F535";
+}
+ul li:nth-child(2n) {
+    color: rgb(4, 4, 129);
+}
+.main__work-info {
+    text-align: center;
+    background: linear-gradient(to right, #9ac5ff, #d1e8ff);
+    border-radius: 10px;
+    list-style: none;
+    padding: 5px;
+    margin: 5px 0;
+}
+.main__work-info li::before {
+    content: "\1F534";
+}
+.main__workphotos {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 15vw;
+    justify-content:center;
+}
+.main__hobby {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+}
+.main__hobby-info {
+    text-align: center;
+    background: linear-gradient(to right, #9ac5ff, #d1e8ff);
+    border-radius: 10px;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    height: 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main__hobby-info li::before {
+    content: "\26AB";
+}
+.main__hobby-info li:nth-child(2n) {
+    color:#ff1f8f
+}
+.main__hobby-info li:nth-child(2n-1) {
+    color:#110092
+}
+.main__hobbyphotos {
+    display: flex;
+    flex-direction: column;
+    gap:0;
+    height: 15vw;
+}
+.main__hobbyphotos-photo {
+    width: 100%;
+    height: 33.33%;
+}
+.main__introductiontoit {
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+.main__introductiontoit-photo {
+    width: 100%;
+    height: 10vw;
+}
+.foot_photo {
+    display: flex;
+    width: 95vw;
+    height: 17vw;
+    margin: auto;
+}
+.foot_photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+footer {
+    grid-area: footer;
+    background: linear-gradient(to right, #02ff20, #abffb9);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer__contacts p {
+    margin: 0;
+}
+.footer__links {
+    display: flex;
+    flex-direction: row;
+}
+.footer__links img,
+.footer__phone img {
+    height: 30px;
+    width: 30px;
+}
+.footer__phone {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:5px;
+}
+input::placeholder {
+    color:#110092;
+}
+input:hover {
+    color: red;
+    font-size: 16px;
+    transition: all 0.5s;
+}
